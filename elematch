@@ -1,0 +1,8 @@
+
+- $elemMatch = $elemMatch operator to find all documents that contain the specified subdocument
+
+    db.sales.find({
+    items: {
+        $elemMatch: { name: "laptop", price: { $gt: 800 }, quantity: { $gte: 1 } },
+    },
+    })

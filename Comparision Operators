@@ -1,0 +1,6 @@
+Mongo Comparision Operators
+
+    - $gt : Greater than
+    - $lt : Greater than
+    - $gte : Greater than or equal to 
+    - $lte : Less than or qual to 

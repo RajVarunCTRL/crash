@@ -6,3 +6,4 @@
         $elemMatch: { name: "laptop", price: { $gt: 800 }, quantity: { $gte: 1 } },
     },
     })
+elemMatch operator is a valid operator that's included in the MongoDB Shell to find a subdocument that matches specific criteria in an array

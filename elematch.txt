@@ -7,3 +7,13 @@
     },
     })
 elemMatch operator is a valid operator that's included in the MongoDB Shell to find a subdocument that matches specific criteria in an array
+
+db.transactions.find({ 
+    transactions: {
+        $elemMatch: { 
+            amount: 
+            { $lte: 4500 }, 
+            transaction_code: "sell" 
+        }
+    }
+})

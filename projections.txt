@@ -1,0 +1,38 @@
+Projections:
+    Used for returning specific data from the query.
+     1 = include / Inclusion
+     0 = exclude / Exclusion
+    SYNTAX:
+        db.collection.find( <query>, <projection> )
+
+    __INCLUDE A FIELD__
+        SYNTAX
+            db.collection.find( <query>, { <field> : 1 })
+        Ex
+            // Return all restaurant inspections - business name, result, and _id fields only
+            db.inspections.find(
+                { sector: "Restaurant - 818" },
+                { business_name: 1, result: 1 }
+            )
+
+    __EXCLUDE A FIELD__
+        SYNTAX
+            db.collection.find(query, { <field> : 0, <field>: 0 })
+        Ex
+            // Return all inspections with result of "Pass" or "Warning" - exclude date and zip code
+            db.inspections.find(
+                { result: { $in: ["Pass", "Warning"] } },
+                { date: 0, "address.zip": 0 }
+            )
+        Another Ex:
+
+            Removing the _id field.
+                // Return all restaurant inspections - business name and result fields only
+                db.inspections.find(
+                { sector: "Restaurant - 818" },
+                { business_name: 1, result: 1, _id: 0 }
+                )
+            
+
+
+

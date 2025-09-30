@@ -11,11 +11,11 @@ Deleting Documents
             db.collection.deleteOne({<filter>,<option>})
     
     ex:
-        db.podcasts.deleteOne({_id:ObjectId("ftyguahsijodkl")})
+        db.podcasts.deleteOne({ _id: Objectid("6282c9862acb966e76bbf20a") })
     
 -deleteMany()
     - Used to delete many documents, by categories, where every document has the same value&info.
 SYNTAX: db.collection.deleteMany({<filter>, <option>})
 
     ex:
-        db.podcasts.deleteMany({category:"crime"})
+        db.podcasts.deleteMany({category: “crime”})

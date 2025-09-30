@@ -1,6 +1,6 @@
 - replaceOne()
 
-    db.collection.replaceOne(filter, replacement, options)
+    db.collection.replaceOne(<filter>, <replacement>, <options>)
 
         filter: A query that matches the document to replace
         replacement: The new document to replace the old one with

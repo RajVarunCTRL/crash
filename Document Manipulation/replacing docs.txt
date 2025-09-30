@@ -4,7 +4,7 @@
 
         filter: A query that matches the document to replace
         replacement: The new document to replace the old one with
-        options: An object that specifies options for the update
+        options: An object that specifies options for the update ** options is not a required "arg"
 
         ex:
                 db.books.replaceOne(

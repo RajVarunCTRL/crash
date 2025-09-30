@@ -1,0 +1,41 @@
+- updateOne()
+
+    db.collection.updateOne(<filter>, <update>, <options>)
+
+    $set -  Adds new fields and values to a document
+            Replaces the value of a field with a specified value
+            db.podcasts.updateOne(
+                {
+                    _id: ObjectId("5e8f8f8f8f8f8f8f8f8f8f8"),
+                },
+
+                {
+                    $set: {
+                    subscribers: 98562,
+                    },
+                }
+            )
+
+    
+    $push - Appends a value to an array
+            If absent, $push adds the array field with the value as its element.
+
+            db.podcasts.updateOne(
+                { _id: ObjectId("5e8f8f8f8f8f8f8f8f8f8f8") },
+                { $push: { hosts: "Nic Raboy" } }
+            )
+
+<options>
+    - upsert
+        Insert a document with provided information if matching documents don't exist
+        vals : true | false
+
+        db.podcasts.updateOne(
+            { title: "The Developer Hub" },
+            { $set: { topics: ["databases", "MongoDB"] } },
+            { upsert: true }
+        )
+
+
+- findAndModify()
+    The findAndModify() method is used to find and replace a single document in MongoDB. It accepts a filter document, a replacement document, and an optional options object.

@@ -1,0 +1,23 @@
+--Logical Operators--
+    
+    - $and - Logical AND 
+                db.<collection>.find({
+                    $and: [
+                        {<exp1>},
+                        {<exp2>}
+                        ..
+                    ]
+                })
+
+                IMPLICIT SYNTAX:
+                    db.<collection>.find({<exp1> , <exp2>})  // Comma acts as an AND
+
+
+    - $or  - Logical OR
+                db.<collection>.find({
+                    $or: [
+                        {<exp1>},
+                        {<exp2>}
+                        ..
+                    ]
+                })

@@ -1,0 +1,27 @@
+More on cursors MONGODB
+
+cursor - Pointer to the result set of a query
+        find() returns a cursor
+    cursor method:
+        Chained to queries
+        Perform actions on result set.
+            - cursor.sort():
+                passing 1 = ascending order.
+                ex. // Return data on all music companies, sorted alphabetically from A to Z.
+                    db.collection.find({catgory_code:"fun"}).sort({name:1}) 
+                passing -1 = descending order.
+                    ex. ex. db.collection.find({catgory_code:"fun"}).sort({name:-1}) 
+
+                SYNTAX: 
+                    db.collection.find(<query>).sort(<sort>)
+            - cursor.limit()
+                Limits/Contrains how many doucments are returned
+                .limit(3) top 3 documents are returned.
+                ex. // Return the three music companies with the highest number of employees. Ensure consistent sort order.
+                    db.companies
+                    .find({ category_code: "music" })
+                    .sort({ number_of_employees: -1, _id: 1 })
+                    .limit(3);
+                    
+                SYNTAX: 
+                    db.companies.find(<query>).limit(<number>)

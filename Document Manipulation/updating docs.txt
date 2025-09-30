@@ -39,3 +39,17 @@
 
 - findAndModify()
     The findAndModify() method is used to find and replace a single document in MongoDB. It accepts a filter document, a replacement document, and an optional options object.
+
+    SYNTAX:
+    db.collection.findAndModify(<query>,<update>,<options>)
+
+    db.zips.findAndModify({
+        query: { _id: ObjectId("5c8eccc1caa187d17ca72ee7") },
+        update: { $set: { pop: 40000 } },
+        new: true,
+        upsert: true
+    })
+
+    new: option is set to true, the updated version of a document is returned, regardless of whether that document is new or existing
+    upsert: upsert option is set to true, a new document will be inserted if one does not already exist. For existing documents, the upsert option will cause the document to be updated.
+

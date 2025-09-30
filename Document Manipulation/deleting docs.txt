@@ -1,0 +1,21 @@
+Deleting Documents
+
+
+- deleteOne()
+- deleteMany()
+
+ find and delete with object "_id"
+-deleteOne()
+    - Used to delete a single document from the db.
+    SYNTAX:
+            db.collection.deleteOne({<filter>,<option>})
+    
+    ex:
+        db.podcasts.deleteOne({_id:ObjectId("ftyguahsijodkl")})
+    
+-deleteMany()
+    - Used to delete many documents, by categories, where every document has the same value&info.
+SYNTAX: db.collection.deleteMany({<filter>, <option>})
+
+    ex:
+        db.podcasts.deleteMany({category:"crime"})

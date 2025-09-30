@@ -1,0 +1,13 @@
+counting Documents in Mongo
+
+- countDocuments()
+
+    Syntax: 
+        db.collection.countDocuments(<query>,<options>)
+    Ex. 
+        // Count number of docs in trip collection
+        db.trips.countDocuments({})
+
+    Another ex.
+        // Count number of trips over 120 minutes by subscribers
+        db.trips.countDocuments({ tripduration: { $gt: 120 }, usertype: "Subscriber" })

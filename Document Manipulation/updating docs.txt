@@ -53,3 +53,18 @@
     new: option is set to true, the updated version of a document is returned, regardless of whether that document is new or existing
     upsert: upsert option is set to true, a new document will be inserted if one does not already exist. For existing documents, the upsert option will cause the document to be updated.
 
+- updateMany()
+    Updates many documents in the filter. Used for mass updation of documents and elems.
+        - rollback not possible
+
+    db.collection.updateMany(<filter>,<update>,<options>)
+    Ex : 
+        db.books.updateMany({year:2022}, {$set{instock: true}})
+    Another Example:
+        db.books.updateMany(
+        { publishedDate: { $lt: new Date("2019-01-01") } },
+        { $set: { status: "LEGACY" } }
+    )
+
+    One more using $in:
+    db.birds.updateMany({common_name:{$in:["Blue Jay","Grackle"]}},{$set:{last_seen: ISODate("2022-01-01")}})

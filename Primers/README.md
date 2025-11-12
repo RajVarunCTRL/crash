@@ -10,3 +10,12 @@
 * [x] Py
 * [ ] AWS
 * [ ] MongoDB
+
+
+`Disable Pop-ups`:
+
+`
+window.alert = () => {};
+window.confirm = () => true;
+window.prompt = () => null;
+`

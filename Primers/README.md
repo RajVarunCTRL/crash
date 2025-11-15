@@ -2,7 +2,7 @@
 
 ## Essentials
 * [x] SF
-* [ ] ADO & DSO
+* [x] ADO & DSO
 * [x] G.AI
 * [ ] WT
 

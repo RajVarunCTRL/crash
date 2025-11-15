@@ -9,7 +9,7 @@
 ## Primer Track 
 * [x] Py
 * [ ] AWS
-* [ ] MongoDB
+* [x] MongoDB
 
 
 `Disable Pop-ups`:

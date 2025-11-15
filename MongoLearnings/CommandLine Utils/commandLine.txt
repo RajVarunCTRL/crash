@@ -1,0 +1,39 @@
+- m̲o̲n̲g̲s̲t̲a̲t̲
+    mongostat provides a quick, real-time overview of the overall MongoDB server's status.
+    
+    F̲u̲n̲c̲t̲i̲o̲n̲:
+        It reports general, system-wide statistics about the operations and resource usage of a mongod or mongos instance
+    
+    K̲e̲y̲ M̲e̲t̲r̲i̲c̲s̲:
+        It displays counts for operations (insert, query, update, delete, getmore, command), network traffic (net_in, net_out), connection counts (conn), memory usage (vsize, res), and replica set state (repl).
+
+    U̲s̲e̲ C̲a̲s̲e̲:
+        Ideal for quickly assessing the general health and activity of the database instance and checking if resource values are within normal ranges.
+
+
+    
+- m̲o̲n̲g̲o̲t̲o̲p̲
+    
+    F̲u̲n̲c̲t̲i̲o̲n̲:
+        It displays statistics on a per-collection (namespace) level, allowing you to pinpoint which specific collections are consuming the most database time.
+    
+    K̲e̲y̲ M̲e̲t̲r̲i̲c̲s̲:
+        The output includes ns (namespace), total time spent on operations, read time, and write time for each busy collection.
+    
+    U̲s̲e̲ C̲a̲s̲e̲:
+        Useful for identifying specific high-activity collections or potential performance bottlenecks at a granular level.
+
+
+Diff :
+
+-----------------------------------------------------------------------------
+|Feature      |           mongostat             |          mongotop         |
+|---------------------------------------------------------------------------|
+|    Focus    | Overall server activity         | Time spent on             |
+|             | and resource usage              | operations per collection |
+|---------------------------------------------------------------------------|
+| Granularity | System-wide (database level)    | Collection level          |
+|---------------------------------------------------------------------------|
+|   Purpose   | Quick overview of general       | Pinpointing specific,     |
+|             | health and operations           | busy collections          |
+-----------------------------------------------------------------------------

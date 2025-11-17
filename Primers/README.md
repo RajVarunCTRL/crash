@@ -2,13 +2,13 @@
 
 ## Essentials
 * [x] SF
-* [x] ADO & DSO
+* [xa] ADO & DSO
 * [x] G.AI
-* [ ] WT
+* [x] WT
 
 ## Primer Track 
 * [x] Py
-* [ ] AWS
+* [x] AWS
 * [x] MongoDB
 
 

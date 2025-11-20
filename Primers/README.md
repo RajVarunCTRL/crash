@@ -19,3 +19,11 @@ window.alert = () => {};
 window.confirm = () => true;
 window.prompt = () => null;
 `
+<p align="center">
+    <img src="https://hits.sh/github.com/RajVarunCTRL/crash.svg" alt="Hits">
+</p>
+
+
+
+
+
